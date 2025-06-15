@@ -3,7 +3,7 @@ using System;
 
 namespace OOP
 {
-    internal class Program
+    internal class Program : Animal
     {
         static void Main(string[] args)
         {
@@ -18,6 +18,10 @@ namespace OOP
             student.setAge(20);
 
             student.getAge();
+
+            Cat cat = new Cat();
+            cat.MakeSound();
+
 
 
             Console.ReadLine();
