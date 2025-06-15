@@ -9,20 +9,18 @@ namespace OOP.Classes
         public int Age { get; set; }
 
 
-        public Person(string name, int age)
+        public Person(string name)
         {
             Name = name;
-            Age = age;
         }
 
         public void Greet()
         {
 
-            Console.WriteLine($"Hello, my name is {Name} and I am {Age} years old.");
-
-            Console.WriteLine();
-
+            Console.WriteLine($"Hello, my name is {Name}");
         }
+
+
 
 
     }
