@@ -19,8 +19,11 @@ namespace OOP
 
             student.getAge();
 
-            Cat cat = new Cat();
-            cat.MakeSound();
+            Shape shape = new Shape();
+
+            shape.DrawCircle();
+
+
 
 
 

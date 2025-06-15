@@ -5,7 +5,7 @@ namespace OOP.Classes
     internal class Cat : Animal
     {
 
-        public void Meows()
+        public void Speak()
         {
             Console.WriteLine("The cat meows.");
         }
