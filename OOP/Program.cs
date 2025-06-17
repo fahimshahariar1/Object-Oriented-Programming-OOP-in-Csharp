@@ -45,7 +45,7 @@ namespace OOP
             {
                 await Task.Delay(1000); // Simulate data processing
                 Console.WriteLine("Data processed");
-                return data * 2; // Example processing
+                return data * 2;
             }
 
             async Task SaveDataAsync(int data)
