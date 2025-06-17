@@ -29,7 +29,6 @@ namespace OOP
             async Task<string> SayHello()
             {
                 await Task.Delay(2000); // Simulate some asynchronous work
-                Console.WriteLine("Fahim Best");
                 return "Hello, Fahim!";
             }
 
@@ -62,7 +61,9 @@ namespace OOP
                 await SaveDataAsync(processed);
             }
 
-            SayHello().GetAwaiter().GetResult();
+            string message = SayHello().GetAwaiter().GetResult();
+
+            Console.WriteLine(message);
 
             ProcessAsync().GetAwaiter().GetResult();
 
