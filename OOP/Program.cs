@@ -1,5 +1,6 @@
 ﻿using OOP.Classes;
 using System;
+using System.Threading.Tasks;
 
 namespace OOP
 {
@@ -10,21 +11,60 @@ namespace OOP
 
             Person intro = new Person(name: "Fahim");
 
-            intro.Greet();
+            //intro.Greet();
 
 
             Student student = new Student();
 
-            student.setAge(20);
+            //student.setAge(20);
 
-            student.getAge();
+            //student.getAge();
 
             Shape shape = new Shape();
 
-            shape.DrawCircle();
+            //shape.DrawCircle();
 
 
 
+            async Task<string> SayHello()
+            {
+                await Task.Delay(2000); // Simulate some asynchronous work
+                Console.WriteLine("Fahim Best");
+                return "Hello, Fahim!";
+            }
+
+            //chianing async method
+
+            async Task<int> LoadDataAsync()
+            {
+                await Task.Delay(1000); // Simulate data loading
+                Console.WriteLine("Data loaded");
+                return 42; // Example data
+            }
+
+            async Task<int> ProcessDataAsync(int data)
+            {
+                await Task.Delay(1000); // Simulate data processing
+                Console.WriteLine("Data processed");
+                return data * 2; // Example processing
+            }
+
+            async Task SaveDataAsync(int data)
+            {
+                await Task.Delay(1000); // Simulate saving data
+                Console.WriteLine($"Data saved: {data}");
+            }
+
+            async Task ProcessAsync()
+            {
+                var data = await LoadDataAsync();
+                var processed = await ProcessDataAsync(data);
+                await SaveDataAsync(processed);
+            }
+
+            SayHello().GetAwaiter().GetResult();
+
+            ProcessAsync().GetAwaiter().GetResult();
 
 
             Console.ReadLine();
